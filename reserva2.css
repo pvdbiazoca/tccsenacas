@@ -16,7 +16,7 @@
   }
   
   .card {
-    background-color: #f5f6ff;
+    background-color: #fff;
     padding: 30px;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@
   .row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .column {
