@@ -1,21 +1,19 @@
-
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #002060;
-    color: white;
-    padding: 20px 0; }
-    
-    .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #002060;
+  color: white;
+  padding: 20px 0; }
+ 
+ .container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #e3e6fb;
   }
-
   
   .card {
     background-color: #f5f6ff;
