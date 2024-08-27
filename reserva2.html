@@ -5,70 +5,50 @@
   <link rel="stylesheet" href="reserva2.css">
 </head>
 <body>
-    <div class="">
-        <div class="header">
-            <h1>Edu Organiza</h1>
-        </div>
+    <div class="header">
+        <h1>Edu Organiza</h1>
+        <button class="logout-button" onclick="window.location.href='inicio.html'">Sair</button>
+    </div>
 
     <div class="container">
-      <div class="card">
-        <h2>Reserva</h2>
-        <div class="row">
-          <div class="column">
-            <p>Local:</p>
-            <textarea id="local1" class="column-item"></textarea>
-            <textarea id="local2" class="column-item"></textarea>
-            <textarea id="local3" class="column-item"></textarea>
-            <textarea id="local4" class="column-item"></textarea>
-            <textarea id="local5" class="column-item"></textarea>
-            <textarea id="local6" class="column-item"></textarea>
-          </div>
-          <div class="column">
-            <p>Professor(a):</p>
-            <textarea id="professor1" class="column-item"></textarea>
-            <textarea id="professor2" class="column-item"></textarea>
-            <textarea id="professor3" class="column-item"></textarea>
-            <textarea id="professor4" class="column-item"></textarea>
-            <textarea id="professor5" class="column-item"></textarea>
-            <textarea id="professor6" class="column-item"></textarea>
-          </div>
-          <div class="column">
-            <p>Horários:</p>
-            <textarea id="horario1" class="column-item"></textarea>
-            <textarea id="horario2" class="column-item"></textarea>
-            <textarea id="horario3" class="column-item"></textarea>
-            <textarea id="horario4" class="column-item"></textarea>
-            <textarea id="horario5" class="column-item"></textarea>
-            <textarea id="horario6" class="column-item"></textarea>
-          </div>
+        <div class="card">
+            <h2>Reserva</h2>
+            <div class="row">
+                <div class="column">
+                    <p>Local:</p>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                </div>
+                <div class="column">
+                    <p>Professor(a):</p>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                </div>
+                <div class="column">
+                    <p>Horários:</p>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                    <textarea class="column-item"></textarea>
+                </div>
+            </div>
+            <div class="arrow"></div>
+            <div class="building"></div>
+            <div class="building2"></div>
+            <div class="line"></div>
+            <button class="save-button">Salvar Reserva</button>
+            <button class="back-button" onclick="window.location.href='reserva1.html'">Voltar</button>
         </div>
-        <div class="button-group">
-          <button id="save-button" class="btn btn-save">Salvar Reserva</button>
-          <a href="reserva1.html" class="btn btn-back">Voltar</a>
-        </div>
-        <p id="success-message" style="display: none; color: green;">Reserva salva com sucesso!</p>
-      </div>
     </div>
-    <script>
-        document.getElementById('save-button').addEventListener('click', function() {
-            // Coleta os dados dos textareas
-            const localValues = Array.from(document.querySelectorAll('[id^="local"]')).map(el => el.value);
-            const professorValues = Array.from(document.querySelectorAll('[id^="professor"]')).map(el => el.value);
-            const horarioValues = Array.from(document.querySelectorAll('[id^="horario"]')).map(el => el.value);
-
-            // Aqui você pode fazer o que precisar com os dados, como enviá-los para um servidor ou salvar localmente
-            console.log('Local:', localValues);
-            console.log('Professor(a):', professorValues);
-            console.log('Horários:', horarioValues);
-
-            // Exibe a mensagem de sucesso
-            document.getElementById('success-message').style.display = 'block';
-
-            // Oculta a mensagem de sucesso após 3 segundos
-            setTimeout(() => {
-                document.getElementById('success-message').style.display = 'none';
-            }, 3000);
-        });
-    </script>
-    </body>
+</body>
 </html>

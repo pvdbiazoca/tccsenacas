@@ -8,6 +8,21 @@
   padding: 20px; 
 }
 
+
+.logout-button {
+  background-color: #00308f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #0056b3;
+}
+
 .container {
   display: flex;
   justify-content: center;
