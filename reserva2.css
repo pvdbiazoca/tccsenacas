@@ -13,17 +13,17 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: #e3e6fb;
   }
 
   
   .card {
-    background-color: #fffbf5;
+    background-color: #f5f6ff;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 1250px;
-    height: 500px;
+    height: 650px;
     text-align: center;
   }
   
