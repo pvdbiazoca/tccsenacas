@@ -84,7 +84,7 @@ h2 {
   transition: background-color 0.3s;
 }
 
-.btn-save {
+.save-button {
   background-color: #002060;
   color: white;
 }
@@ -93,7 +93,7 @@ h2 {
   background-color: #0056b3;
 }
 
-.btn-back {
+.back-button {
   background-color: #002060;
   color: white;
 }
