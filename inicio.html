@@ -21,19 +21,36 @@
                 <input type="password" id="password" name="password" placeholder="Sua senha" required>
                 
                 <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" id="professor" name="role" value="Professor">
+                    <button type="button" class="nav-button" id="professor-button" data-role="Professor" onclick="selectButton('professor-button')">
                         Professor
-                    </label>
-                    <label>
-                        <input type="checkbox" id="manutencao" name="role" value="Manutenção">
+                    </button>
+                    <button type="button" class="nav-button" id="manutencao-button" data-role="Manutenção" onclick="selectButton('manutencao-button')">
                         Manutenção
-                    </label>
+                    </button>
                 </div>
+                
+                
+                
                 
                 <button type="submit">Entrar</button>
             </form>
         </div>
     </div>
+
+    <script>
+    function selectButton(buttonId) {
+    // Remove a classe 'active' de todos os botões
+    const buttons = document.querySelectorAll('.nav-button');
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Adiciona a classe 'active' ao botão selecionado
+    const selectedButton = document.getElementById(buttonId);
+    selectedButton.classList.add('active');
+}
+</script>
+    
+    
 </body>
 </html>

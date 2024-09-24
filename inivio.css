@@ -22,12 +22,6 @@ body {
     margin: 0;
 }
 
-.header img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
 /* Container principal */
 .container {
     display: flex;
@@ -83,17 +77,35 @@ body {
     background-color: #001d4d;
 }
 
-/* Caixa de seleção */
+
 .checkbox {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+    display: flex; /* Flex para o label */
+    align-items: center; /* Alinha o checkbox e o texto verticalmente */
+    font-size: 14px; /* Tamanho da fonte para os labels */
 }
 
 .checkbox input {
-    margin-right: 5px;
+    margin-right: 5px; /* Espaço à direita do checkbox */
 }
 
-.checkbox label {
-    font-size: 14px;
+.checkbox-group {
+    display: flex; /* Usar flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaçar uniformemente */
+    margin-bottom: 15px; /* Espaço abaixo do grupo de checkboxes */
 }
+
+.nav-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button.active {
+    background-color: #007bff; /* Cor para o botão ativo */
+    color: white;
+}
+
