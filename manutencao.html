@@ -3,29 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Edu Organiza</title>
+    <title>Recados - Manutenção</title>
     <link rel="stylesheet" href="manutencao.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Bem-vindo ao Edu Organiza</h1>
-        <label for="role">Selecione sua função:</label>
-        <select id="role">
-            <option value="biblioteca">Biblioteca</option>
-            <option value="lie">L.I.E</option>
-            <option value="manutencao">Manutenção</option>
-        </select>
-        <button onclick="login()">Entrar</button>
+    <div class="header">
+        <h1>Recados para Manutenção</h1>
     </div>
-    
+    <div class="container">
+        <h2 id="sector-title">Selecione seu Setor</h2>
+        
+        <div class="sector-selector">
+            <select id="sector">
+                <option value="">-- Selecione --</option>
+                <option value="biblioteca">Biblioteca</option>
+                <option value="lie">L.I.E</option>
+                <option value="manutencao">Manutenção</option>
+            </select>
+            <button class="submit-button" onclick="showMessages()">Confirmar</button>
+        </div>
+        
+        <div class="message-board" id="message-board" style="display:none;">
+            <h3 id="message-board-title">Recados Recebidos</h3>   
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+                <div class="message-card" data-sector="biblioteca">
+                    <h4>Biblioteca</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Ana Souza</p>
+                        <p><strong>Motivo:</strong> Verificar projetor</p>
+                        <p><strong>Sala:</strong> Conferências</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 10:30</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+
+                <div class="message-card" data-sector="lie">
+                    <h4>L.I.E</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> Carlos Lima</p>
+                        <p><strong>Motivo:</strong> Limpeza pós-aula</p>
+                        <p><strong>Sala:</strong> Lab. Informática</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 11:00</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+
+                <div class="message-card" data-sector="manutencao">
+                    <h4>Manutenção</h4>
+                    <div class="message-details">
+                        <p><strong>Solicitante:</strong> João Silva</p>
+                        <p><strong>Motivo:</strong> Trocar lâmpadas</p>
+                        <p><strong>Sala:</strong> Corredor 2º andar</p>
+                        <p><strong>Data:</strong> 28/10/2024</p>
+                        <p><strong>Horário:</strong> 09:45</p>
+                    </div>
+                    <button class="confirm-button" onclick="confirmMessage(this)">Confirmar</button>
+                </div>
+        </div>
+    </div>
+
     <script>
-        function login() {
-            const role = document.getElementById("role").value;
-            if (role === "manutencao") {
-                window.location.href = 'login.html';
+        function showMessages() {
+            const selectedSector = document.getElementById('sector').value;
+            const messageCards = document.querySelectorAll('.message-card');
+            const messageBoard = document.getElementById('message-board');
+            const sectorSelector = document.querySelector('.sector-selector');
+            const sectorTitle = document.getElementById('sector-title');
+
+            // Oculta todos os cartões
+            messageCards.forEach(card => {
+                card.style.display = 'none';
+            });
+
+            // Mostra apenas os cartões do setor selecionado
+            if (selectedSector) {
+                let hasMessages = false;
+                messageCards.forEach(card => {
+                    if (card.getAttribute('data-sector') === selectedSector) {
+                        card.style.display = 'flex';
+                        hasMessages = true;
+                    }
+                });
+                messageBoard.style.display = hasMessages ? 'flex' : 'none';
+                sectorSelector.style.display = 'none';
+                sectorTitle.style.display = 'none';
             } else {
-                alert("Função não reconhecida para acesso a essa página.");
+                messageBoard.style.display = 'none';
             }
+
+            setTimeout(() => {
+                document.getElementById('sector').value = "";
+            }, 100);
+        }
+
+        function confirmMessage(button) {
+            const card = button.parentElement;
+            button.classList.add('confirmed');
+            button.disabled = true; // Desabilita o botão após confirmação
         }
     </script>
 </body>
