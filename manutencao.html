@@ -3,52 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edu Organiza</title>
+    <title>Login - Edu Organiza</title>
     <link rel="stylesheet" href="manutencao.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Edu Organiza</h1>
-    </div>
     <div class="container">
-        <h2>Manutenção</h2>
-        <div class="content">
-            <div class="form-container">
-                <label for="message">Digite aqui...</label>
-                <textarea id="message" rows="10"></textarea>
-            </div>
-
-            <div class="nav-buttons">
-                <div class="nav-button" data-email="biblioteca@eduorganiza.com">
-                    
-                    <span class="text">Biblioteca</span>
-                </div>
-                <div class="nav-button" data-email="lie@eduorganiza.com">
-                   
-                    <span class="text">L.I.E</span>
-                </div>
-                <div class="nav-button active" data-email="manutencao@eduorganiza.com">
-                   
-                    <span class="text">Manutenção</span>
-                </div>
-            </div>
-        </div>
-        <div class="button-row">
-            <button class="button-container">Enviar</button>
-            <button class="back-button" onclick="window.location.href='reserva1.html'">Voltar</button>
-            <button class="logout-button" onclick="window.location.href='login.html'">Sair</button>
-        </div>
-        
+        <h1>Bem-vindo ao Edu Organiza</h1>
+        <label for="role">Selecione sua função:</label>
+        <select id="role">
+            <option value="biblioteca">Biblioteca</option>
+            <option value="lie">L.I.E</option>
+            <option value="manutencao">Manutenção</option>
+        </select>
+        <button onclick="login()">Entrar</button>
+    </div>
+    
     <script>
-        const buttons = document.querySelectorAll('.nav-button');
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                buttons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                const email = button.dataset.email;
-                document.getElementById('message').placeholder = `Escreva sua mensagem para ${email}`;
-            });
-        });
+        function login() {
+            const role = document.getElementById("role").value;
+            if (role === "manutencao") {
+                window.location.href = 'login.html';
+            } else {
+                alert("Função não reconhecida para acesso a essa página.");
+            }
+        }
     </script>
 </body>
 </html>

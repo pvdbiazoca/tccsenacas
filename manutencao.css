@@ -1,8 +1,8 @@
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 .header {
@@ -13,129 +13,54 @@ body {
 }
 
 .container {
-    max-width: 1060px;
-    height: 520px;
-    margin: 0 auto;
-    margin-top: 40px;
+    max-width: 600px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
     color: #333;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
+.message-board {
     margin-top: 20px;
 }
 
-.form-container {
-    text-align: center;
-    width: 1050px;
-    height: 250px;
+.message-card {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
 }
 
-textarea {
-    width: 90%;
-    padding: 30px;
-    margin: 20px 0;
-    border: 3px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 100px; /* Ajuste conforme o layout necessário */
-    width: 80px; /* Para garantir que ele pegue toda a largura */
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #002060;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-button:hover {
-    background-color: #315cb2;
-}
-.button-row {
-    display: flex;
-    justify-content: center; /* Centraliza os botões */
-    gap: 10px; /* Espaço entre os botões */
-    margin-top: 20px; 
-}
-
-.button-container, .back-button, .logout-button {
-    padding: 10px 15px; /* Ajuste o padding conforme necessário */
-    border: none;
-    width: 80px;
-    height: 40px;
-    background-color: #002060;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-    font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
-}
-
-.button-container:hover, .back-button:hover, .logout-button:hover {
-    background-color: #315cb2; /* Cor de fundo ao passar o mouse */
-}
-
-
-.nav-buttons {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.nav-button {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.nav-button:hover {
-    background-color: #ddd;
-}
-
-.nav-button.active {
-    background-color: #002060;
-    color: #fff;
-}
-
-.nav-button svg {
-    width: 24px;
-    height: 24px;
-}
-
-.nav-button .text {
+.message-card h4 {
+    margin: 0 0 10px;
+    color: #002060;
     font-size: 16px;
+}
+
+.message-card p {
+    margin: 0;
+    color: #333;
+}
+
+.back-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #002060;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #315cb2;
 }

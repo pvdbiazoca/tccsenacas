@@ -13,7 +13,7 @@
     <div class="container">
         <div class="login-form">
             <h2>Login</h2>
-            <form action="reserva1.html" method="post">
+            <form onsubmit="handleLogin(event)">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Seu email" required>
                 
@@ -21,16 +21,13 @@
                 <input type="password" id="password" name="password" placeholder="Sua senha" required>
                 
                 <div class="checkbox-group">
-                    <button type="button" class="nav-button" id="professor-button" data-role="Professor" onclick="selectButton('professor-button')">
+                    <button type="button" class="nav-button" id="professor-button" data-role="professor" onclick="selectButton('professor-button')">
                         Professor
                     </button>
-                    <button type="button" class="nav-button" id="manutencao-button" data-role="Manutenção" onclick="selectButton('manutencao-button')">
+                    <button type="button" class="nav-button" id="manutencao-button" data-role="manutencao" onclick="selectButton('manutencao-button')">
                         Manutenção
                     </button>
                 </div>
-                
-                
-                
                 
                 <button type="submit">Entrar</button>
             </form>
@@ -38,19 +35,33 @@
     </div>
 
     <script>
-    function selectButton(buttonId) {
-    // Remove a classe 'active' de todos os botões
-    const buttons = document.querySelectorAll('.nav-button');
-    buttons.forEach(button => {
-        button.classList.remove('active');
-    });
+        // Function to add 'active' class to the selected button
+        function selectButton(buttonId) {
+            const buttons = document.querySelectorAll('.nav-button');
+            buttons.forEach(button => button.classList.remove('active'));
 
-    // Adiciona a classe 'active' ao botão selecionado
-    const selectedButton = document.getElementById(buttonId);
-    selectedButton.classList.add('active');
-}
-</script>
-    
-    
+            const selectedButton = document.getElementById(buttonId);
+            selectedButton.classList.add('active');
+        }
+
+        // Function to handle form submission
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form from submitting traditionally
+
+            const activeButton = document.querySelector('.nav-button.active');
+            if (activeButton) {
+                const role = activeButton.getAttribute('data-role');
+                
+                // Redirect based on the selected role
+                if (role === 'manutencao') {
+                    window.location.href = 'manutencao.html';
+                } else if (role === 'professor') {
+                    window.location.href = 'reserva1.html';
+                }
+            } else {
+                alert('Por favor, selecione uma função.');
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu Organiza</title>
+    <link rel="stylesheet" href="recados.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Edu Organiza</h1>
+    </div>
+    <div class="container">
+        <h2>Recados</h2>
+        <div class="content">
+            <div class="form-container">
+                <label for="message">Digite aqui...</label>
+                <textarea id="message" rows="10"></textarea>
+            </div>
+
+            <div class="nav-buttons">
+                <div class="nav-button" data-email="biblioteca@eduorganiza.com">
+                    
+                    <span class="text">Biblioteca</span>
+                </div>
+                <div class="nav-button" data-email="lie@eduorganiza.com">
+                   
+                    <span class="text">L.I.E</span>
+                </div>
+                <div class="nav-button active" data-email="manutencao@eduorganiza.com">
+                   
+                    <span class="text">Manutenção</span>
+                </div>
+            </div>
+        </div>
+        <div class="button-row">
+            <button class="button-container">Enviar</button>
+            <button class="back-button" onclick="window.location.href='reserva1.html'">Voltar</button>
+            <button class="logout-button" onclick="window.location.href='login.html'">Sair</button>
+        </div>
+        
+    <script>
+        const buttons = document.querySelectorAll('.nav-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const email = button.dataset.email;
+                document.getElementById('message').placeholder = `Escreva sua mensagem para ${email}`;
+            });
+        });
+    </script>
+</body>
+</html>
