@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu Organiza - Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css"> <!-- Usando o mesmo CSS -->
+</head>
+<body>
+    <div class="header">
+        <h1>Edu Organiza</h1>
+    </div>
+    <div class="container">
+        <div class="register-form">
+            <h2>Cadastro</h2>
+            <form onsubmit="handleRegister(event)">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Seu email" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                
+                <div class="checkbox-group">
+                    <button type="button" class="nav-button" id="professor-button" data-role="professor" onclick="selectButton('professor-button')">
+                        Professor
+                    </button>
+                    <button type="button" class="nav-button" id="manutencao-button" data-role="manutencao" onclick="selectButton('manutencao-button')">
+                        Manutenção
+                    </button>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Função para lidar com o registro (pode ser expandida conforme necessário)
+        function handleRegister(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            alert('Cadastro realizado com sucesso!'); // Exemplo de alerta
+            // Aqui você pode adicionar a lógica para enviar os dados do cadastro para o servidor
+        }
+    </script>
+</body>
+</html>

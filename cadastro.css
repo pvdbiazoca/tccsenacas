@@ -30,8 +30,8 @@ body {
     padding: 20px;
 }
 
-/* Formulário de login */
-.login-form {
+/* Formulário de cadastro */
+.register-form {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -43,17 +43,17 @@ body {
     margin-top: 20px;
 }
 
-.login-form h2 {
+.register-form h2 {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.login-form label {
+.register-form label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.login-form input {
+.register-form input {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -62,7 +62,7 @@ body {
     box-sizing: border-box;
 }
 
-.login-form button {
+.register-form button {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -73,8 +73,52 @@ body {
     width: 100%;
 }
 
-.login-form button:hover {
+.register-form button:hover {
     background-color: #001d4d;
 }
 
+/* Estilo para o link de login */
+.register-form p {
+    text-align: center;
+    margin-top: 15px;
+}
 
+.register-form a {
+    color: #5ca0ff;
+    text-decoration: none;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex; /* Flex para o label */
+    align-items: center; /* Alinha o checkbox e o texto verticalmente */
+    font-size: 14px; /* Tamanho da fonte para os labels */
+}
+
+.checkbox input {
+    margin-right: 5px; /* Espaço à direita do checkbox */
+}
+
+.checkbox-group {
+    display: flex; /* Usar flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaçar uniformemente */
+    margin-bottom: 15px; /* Espaço abaixo do grupo de checkboxes */
+}
+
+.nav-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button.active {
+    background-color: #5ca0ff; /* Cor para o botão ativo */
+    color: white;
+}
