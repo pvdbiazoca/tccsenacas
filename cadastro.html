@@ -42,8 +42,23 @@
         // Função para lidar com o registro (pode ser expandida conforme necessário)
         function handleRegister(event) {
             event.preventDefault(); // Impede o envio do formulário
-            alert('Cadastro realizado com sucesso!'); // Exemplo de alerta
-            // Aqui você pode adicionar a lógica para enviar os dados do cadastro para o servidor
+            const activeButton = document.querySelector('.nav-button.active');
+            if (activeButton) {
+                const role = activeButton.getAttribute('data-role');
+                alert(`Cadastro realizado com sucesso como ${role}!`); // Exemplo de alerta
+                // Aqui você pode adicionar a lógica para enviar os dados do cadastro para o servidor
+            } else {
+                alert('Por favor, selecione uma função.');
+            }
+        }
+
+        // Função para adicionar a classe 'active' ao botão selecionado
+        function selectButton(buttonId) {
+            const buttons = document.querySelectorAll('.nav-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            const selectedButton = document.getElementById(buttonId);
+            selectedButton.classList.add('active');
         }
     </script>
 </body>

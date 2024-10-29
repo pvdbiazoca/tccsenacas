@@ -84,8 +84,9 @@ body {
 }
 
 .register-form a {
-    color: #5ca0ff;
-    text-decoration: none;
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .register-form a:hover {

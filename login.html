@@ -20,7 +20,6 @@
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" placeholder="Sua senha" required>
                 
-                
                 <button type="submit">Entrar</button>
             </form>
             <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
@@ -28,31 +27,20 @@
     </div>
 
     <script>
-        // Function to add 'active' class to the selected button
-        function selectButton(buttonId) {
-            const buttons = document.querySelectorAll('.nav-button');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            const selectedButton = document.getElementById(buttonId);
-            selectedButton.classList.add('active');
-        }
-
-        // Function to handle form submission
+        // Função para lidar com o login
         function handleLogin(event) {
-            event.preventDefault(); // Prevent form from submitting traditionally
+            event.preventDefault(); // Impede o envio do formulário
 
-            const activeButton = document.querySelector('.nav-button.active');
-            if (activeButton) {
-                const role = activeButton.getAttribute('data-role');
-                
-                // Redirect based on the selected role
-                if (role === 'manutencao') {
-                    window.location.href = 'manutencao.html';
-                } else if (role === 'professor') {
-                    window.location.href = 'reserva1.html';
-                }
+            // Obter os valores dos campos de entrada
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Verificar se os campos estão preenchidos
+            if (email && password) {
+                // Redirecionar para a página de reservas
+                window.location.href = 'reserva1.html'; // Redireciona para reserva1.html
             } else {
-                alert('Por favor, selecione uma função.');
+                alert('Por favor, preencha todos os campos.');
             }
         }
     </script>
